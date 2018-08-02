@@ -44,7 +44,8 @@ public class TipCalculatorController implements Initializable {
     private TextField totalTextField;
 
     //chamado pelo FXMLoader para inicializar o controlador
-    public void initialize() {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
         //0 a 4 arredonda para baixo, 5 a 9 arredonda para cima
         currency.setRoundingMode(RoundingMode.HALF_UP);
 
@@ -74,11 +75,6 @@ public class TipCalculatorController implements Initializable {
             totalTextField.setText("");
             tipTextField.setText("");
         }
-    }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
     }
 
 }
